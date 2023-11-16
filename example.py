@@ -20,5 +20,5 @@ login = input("Podaj login: ")
 haslo = input("Podaj haslo: ")
 
 
-hashed = hash_haslohaslo)
+hashed = hash_haslo(haslo)
 print("Zaszyfrowane hasło:", hashed)
