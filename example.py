@@ -1,18 +1,18 @@
 import hashlib
 import os
 
-def hash_haslo(password):
+def hash_haslo(haslo):
     # Tworzenie soli
     salt = os.urandom(16)
 
     # Hashowanie hasła z solą
     hashed_haslo = hashlib.pbkdf2_hmac(
         'sha256',  # Używany algorytm skrótu
-        password.encode('utf-8'),  # Konwersja hasła na bajty
+        haslo.encode('utf-8'),  # Konwersja hasła na bajty
         salt,  # Sól
         100000  # Liczba iteracji
     )
-    return salt + hashed_password
+    return salt + hashed_haslo
 
 print("Hello, world!")
 
@@ -20,5 +20,5 @@ login = input("Podaj login: ")
 haslo = input("Podaj haslo: ")
 
 
-hashed = hash_password(haslo)
-print(login, hashed)
+hashed = hash_haslohaslo)
+print("Zaszyfrowane hasło:", hashed)
